@@ -3,7 +3,7 @@
 .top-menu {
     margin: 0 60px;
     position: relative;
-    background: #e0d0da;
+    background: #5A394E;
     box-shadow:
         inset 1px 0 0 rgba(255, 255, 255, .1),
         inset -1px 0 0 rgba(255, 255, 255, .1),
@@ -45,8 +45,8 @@
     width: 50px;
     height: 0;
     top: 8px;
-    border-top: 18px solid #e0d0da;
-    border-bottom: 18px solid #e0d0da;
+    border-top: 18px solid #5A394E;
+    border-bottom: 18px solid #5A394E;
     transform: rotate(360deg);
     z-index: -1;
 }
@@ -100,10 +100,19 @@
     }
 }
 
-* {
-    box-sizing: border-box;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
+.sticky+.content {
+    padding-top: 60px;
+}
+
+.content {
+    padding: 16px;
+}
 
 .container {
     display: flex;

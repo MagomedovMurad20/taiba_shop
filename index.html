@@ -6,20 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="script.js">
     <title>taiba-shop</title>
 </head>
 
 <body>
-    <nav class="top-menu">
-        <ul class="menu-main">
-            <li> <a href="" class="current">Главная</a> </li>
-            <li><a href=""></a>Куртки, жилеты</li>
-            <li><a href=""></a>Платья, юбки, кофты</li>
-            <li><a href=""></a>Джемперы, костюмы(трикотаж)</li>
-        </ul>
-    </nav>
+    <header>
+        <nav class="top-menu" id="navbar">
+            <ul class="menu-main">
+                <li><a href="" class="current">Work</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="container">
+
+    <div class="container content ">
         <div class="product-item">
             <img src="media/1.jpg">
             <div class="product-list">
@@ -55,7 +59,7 @@
             </div>
         </div>
         <div class="product-item">
-            <img src="media/4.jpg">
+            <img src="media/5.jpg">
             <div class="product-list">
                 <h3>Серый костюм(трикотаж)</h3>
                 <span class="price">₽ 1999</span>
@@ -63,7 +67,7 @@
             </div>
         </div>
         <div class="product-item">
-            <img src="media/4.jpg">
+            <img src="media/6.jpg">
             <div class="product-list">
                 <h3>Серый костюм(трикотаж)</h3>
                 <span class="price">₽ 1999</span>
@@ -71,7 +75,15 @@
             </div>
         </div>
         <div class="product-item">
-            <img src="media/4.jpg">
+            <img src="media/7.jpg">
+            <div class="product-list">
+                <h3>Серый костюм(трикотаж)</h3>
+                <span class="price">₽ 1999</span>
+                <a href="" class="button">В корзину</a>
+            </div>
+        </div>
+        <div class="product-item">
+            <img src="media/8.jpg">
             <div class="product-list">
                 <h3>Серый костюм(трикотаж)</h3>
                 <span class="price">₽ 1999</span>
@@ -79,6 +91,29 @@
             </div>
         </div>
     </div>
+    <footer class="top-menu" id="bottombar">
+        <ul class="menu-main">
+            <li><a href="" class="current">Мы работаем с лучшими поставщиками производителями одежды со всего мира</a>
+            </li>
+
+        </ul>
+    </footer>
 </body>
+<script>
+    window.onscroll = function () { myFunction() };
+
+    var navbar = document.getElementById("navbar");
+
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        console.log("suka");
+    }
+</script>
 
 </html>
