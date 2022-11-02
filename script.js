@@ -1,3 +1,4 @@
+
 window.onscroll = function () { myFunction() };
 
 var navbar = document.getElementById("bottombar");
@@ -10,5 +11,4 @@ function myFunction() {
     } else {
         navbar.classList.remove("sticky");
     }
-    console.log("suka");
 }
