@@ -107,14 +107,14 @@
 
 .container {
     display: flex;
-
+    margin: 1.5em;
 }
 
 .product-item {
 
     width: 300px;
     text-align: center;
-    margin: 10px auto;
+    margin: 2px auto;
     border-bottom: 2px solid #F5F5F5;
     background: white;
     font-family: "Open Sans";
