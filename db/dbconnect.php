@@ -1,10 +1,11 @@
 <?php
 $user='root';
 $pass='root';
+
 try {
     $dbh = new PDO('mysql:host=localhost;dbname=taiba', $user, $pass);
-    {
-        print "всё четко бро!";
+    foreach($dbh->query('SELECT * from `kurtki`') as $row) {
+        print_r($row);
     }
     $dbh = null;
 } catch (PDOException $e) {
