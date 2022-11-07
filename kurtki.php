@@ -6,30 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-
-    <title>taiba-shop</title>
+    <title>Куртки</title>
 </head>
 
 <body>
     <header>
-        <nav class="top-menu" id="navbar">
-            <ul class="menu-main">
-                <li><a href="" class="current">Главная</a></li>
-                <li><a href="kurtki.html">Куртки</a></li>
-                <li><a href="platya.html">Платья</a></li>
-                <li><a href="trikotaj.html">Трикотаж</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Сортировать</button>
-                    <div class="dropdown-content">
-                      <a href="#">По убыванию цены</a>
-                      <a href="#">По возрастанию цены</a>
-                      <a href="#">По популярности</a>
-                    </div>
-                  </div>
-            </ul>
-        </nav>
+    <?php
+        $page = 'kurtki';
+        require_once('menu.php');          // задаем значение текущей страницы
+    ?>
     </header>
-
 
     <div class="container content ">
         <div class="product-item">
@@ -99,36 +85,6 @@
             </div>
         </div>
     </div>
-
-    <div class="ufive-feedback">
-        <section id="feedback">
-            <h1>Форма заказа</h1>
-            <form>
-
-                <div class="field name-box">
-                    <input type="text" id="name" placeholder="Татьяна" maxlength="35" pattern="[A-Za-zА-Яа-яЁё]" />
-                    <label for="name">Имя</label>
-                </div>
-
-                <div class="field phone-box">
-                    <input type="text" id="phone" placeholder="+79887778899" pattern="\+\d\d{3}\d{3}\d{4}" name="phone"
-                        required />
-                    <label for="phone">Телефон</label>
-                </div>
-
-                <div class="field msg-box">
-                    <textarea id="msg" rows="4" maxlength="350"
-                        placeholder="Скопируйте ссылку на товар, напишите ваши дополнительные пожелания"
-                        required /></textarea>
-                    <label for="msg">Текст</label>
-                </div>
-
-                <input class="button" type="submit" value="Отправить" />
-
-            </form>
-        </section>
-    </div>
-
     <footer class="top-menu" id="bottombar">
         <ul class="menu-main">
             <li> Мы работаем с лучшими поставщиками производителями одежды со всего
@@ -140,5 +96,6 @@
     </footer>
 </body>
 <script src="js/script.js"></script>
+</body>
 
 </html>

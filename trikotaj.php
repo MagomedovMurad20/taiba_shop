@@ -6,27 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Платья</title>
+    <title>Трикотаж</title>
 </head>
 
 <body>
     <header>
-        <nav class="top-menu" id="navbar">
-            <ul class="menu-main">
-                <li><a href="index.html">Главная</a></li>
-                <li><a  href="kurtki.html">Куртки</a></li>
-                <li><a class="current" href="platya.html">Платья</a></li>
-                <li><a href="trikotaj.html">Трикотаж</a></li>
-                <div class="dropdown">
-                    <button class="dropbtn">Сортировать</button>
-                    <div class="dropdown-content">
-                      <a href="#">По убыванию цены</a>
-                      <a href="#">По возрастанию цены</a>
-                      <a href="#">По популярности</a>
-                    </div>
-                  </div>
-            </ul>
-        </nav>
+    <?php
+        $page = 'trikotaj';
+        require_once('menu.php');          
+    ?>
     </header>
 
     <div class="container content ">
