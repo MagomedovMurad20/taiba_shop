@@ -1,7 +1,7 @@
 
     <?php
         $page = 'signup';
-        require_once('header.php');
-        require_once('auth/loginform.php');
-        require_once('footer.php');
+        require_once('includes/header.php');
+        require_once('formes/loginform.php');
+        require_once('includes/footer.php');
     ?>
