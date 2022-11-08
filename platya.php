@@ -13,7 +13,7 @@
     <header>
     <?php
         $page = 'platya';
-        require_once('menu.php');          // задаем значение текущей страницы
+        require_once('header.php');          // задаем значение текущей страницы
     ?>
     </header>
 
