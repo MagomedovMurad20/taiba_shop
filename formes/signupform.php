@@ -50,7 +50,8 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
     <input type="text" name="email" /></p>
     <p>User pass:
     <input type="password" name="password" /></p>
-    <input type="submit" value="Save">
+    <input type="submit" value="Зарегистрироваться">
 </form>
 </body>
 </html>
+<br/>
