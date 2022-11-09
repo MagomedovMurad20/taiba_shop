@@ -17,7 +17,7 @@
                 <li><a href="kurtki.php" <?php if($page == 'kurtki') echo 'class="current"'?> >Куртки</a></li>
                 <li><a href="platya.php" <?php if($page == 'platya') echo 'class="current"'?> >Платья</a></li>
                 <li><a href="trikotaj.php" <?php if($page == 'trikotaj') echo 'class="current"'?> >Трикотаж</a></li>
-                <li><a href="signup.php" <?php if($page == 'signup') echo 'class="current"'?> >Войти</a></li>
+                <li><a href="registration.php" <?php if($page == 'signup') echo 'class="current"'?> >Войти</a></li>
                 <div class="dropdown">
                     <button class="dropbtn">Сортировать</button>
                     <div class="dropdown-content">
