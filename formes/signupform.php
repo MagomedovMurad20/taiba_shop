@@ -8,7 +8,7 @@ $query_result=$conn->query($querycheck);
 
 if ($query_result !== FALSE)
 {
-echo "table exist";
+//echo "table exist";
 } else
 {
     $conn->query('CREATE TABLE users (
@@ -21,6 +21,17 @@ echo "table exist";
 
 
 if (isset($_POST["email"]) && isset($_POST["password"])) {
+    echo 
+    '
+    <h3>Зарегистрироваться</h3>
+    <form method="post">
+        <p>Логин:
+        <input type="text" name="email" /></p>
+        <p>Пароль:
+        <input type="password" name="password" /></p>
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+    ';
      
     // $email = $_POST["email"];
     // $password = $_POST["password"];
@@ -45,12 +56,11 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         $sql = "INSERT INTO `users` (id, email, pass) VALUES (?, ?, ?)";
         // определяем prepared statement
         $stmt = $conn->prepare($sql);
-        var_dump($stmt);
         // привязываем параметры к значениям
         $rowsNumber = $stmt->execute(array(NULL, $_POST["email"], $_POST["password"]));
         // если добавлена как минимум одна строка
         if($rowsNumber > 0 ){
-            echo "Data successfully added: email=" . $_POST["email"] ."  password= " . $_POST["password"];  
+            echo "Пользователь успешно зарегистрирован: email=" . $_POST["email"] ."  password= " . $_POST["password"];  
         }
     }
     catch (PDOException $e) {
@@ -59,14 +69,4 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
 }
 
 ?>
-<h3>Create a new User</h3>
-<form method="post">
-    <p>User Name:
-    <input type="text" name="email" /></p>
-    <p>User pass:
-    <input type="password" name="password" /></p>
-    <input type="submit" value="Зарегистрироваться">
-</form>
-</body>
-</html>
-<br/>
+

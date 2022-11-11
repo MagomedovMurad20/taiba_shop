@@ -1,30 +1,25 @@
 <?php
+	require_once('./db/dbconnect.php');
 
-	if ($_POST['login']=='' || $_POST['password']=='') echo 
-		'
-				<form action="login" method="POST">
-					<p>логин
-				    <input type="text" name="login" id="login"></p>
-				    <p>пaароль
-				    <input type="password" name="password" id="password"></p>
+	if ($_POST['email']=='' || $_POST['pass']=='') echo 
+		'	<h3>Войти</h3>
+				<form action="login.php" method="POST">
+					<p>Логин
+				    <input type="text" name="email" id="email"></p>
+				    <p>Пароль
+				    <input type="password" name="pass" id="pass"></p>
 				    <input type="submit" id="button" value="Войти">
 				</form>
-				<p><a href="registration">Регистрация</a> </p>
+				<p><a href="registration.php">Если вы не зарегистрированы нажмите сюда</a> </p>
 ';
 	else{
-		//вот так данные можно отправлять без проверки вовсе, ни чего очень плохого случиться не должно. 
-		//PDO все заэкранирует и превратит в текст. 
-		//Можно разве что проверять длинну текста и какие то специфическиие данные
 
-		$sql = "SELECT * FROM users WHERE login=:login AND password=:pass";//Формируем запрос без данных
-		$result = $pdo->prepare($sql);
-		$result->bindvalue(':login', $_POST['login']);	//Заполняем данные
-		$result->bindvalue(':pass', md5(md5($_POST['password'])));	//Заполняем данные. Пароли хранить в открытом виде, дело такое. Поэтому двойной md5)
-		$result->execute( );							//Выполняем запросы
-		$result = $result->fetchAll();					//переводим обьект ПДО в массив данных, для удобной работы
-
-		if (count($result)>0) {//Если база вернула 1 значение, значит и логин и пароль совпали. отлично
-			echo '<meta charset="UTF-8">Ура! Мы авторизировались!'; 
+		$sql = "SELECT * FROM `users` WHERE email=:email AND pass=:pass";//Формируем запрос без данных
+		$stmt = $conn->prepare($sql);
+		$rowsNumber = $stmt->execute(array(":email"=>$_POST["email"], ":pass"=>$_POST["pass"]));
+		$resultArray = $stmt->fetchAll();					
+		if (count($resultArray)>0) {//Если база вернула 1 значение, значит и логин и пароль совпали. отлично
+			echo '<meta charset="UTF-8">Добро пожаловать в личный кабинет!'; 
 			$_SESSION['user'] = $result[0];//сохраняем обьект пользователя в сессии
 			
 		}else echo '<meta charset="UTF-8">Логин или пароль не верный или пользователь не существует';
