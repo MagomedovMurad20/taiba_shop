@@ -20,7 +20,7 @@ if ($query_result !== FALSE)
 	echo "<br/>";
 
 
-if (isset($_POST["email"]) && isset($_POST["password"])) {
+if ($_POST['email']=='' || $_POST['pass']=='') {
     echo 
     '
     <h3>Зарегистрироваться</h3>
@@ -31,38 +31,19 @@ if (isset($_POST["email"]) && isset($_POST["password"])) {
         <input type="password" name="password" /></p>
         <input type="submit" value="Зарегистрироваться">
     </form>
-    ';
-     
-    // $email = $_POST["email"];
-    // $password = $_POST["password"];
-	// var_dump($email, $password);
-	// echo "<br/>";
-    // try {
-    //     $sql = "INSERT INTO `users` (id, email, pass) VALUES (NULL, '$email', '$password')";
-	// 	var_dump($sql);
-
-	// 	$rowsNumber = $conn->exec($sql); 		
-	// 	var_dump($rowsNumber);
-
-    //     if($rowsNumber > 0 ){
-    //         echo "Data successfully added: id=$id email=$email  pass= $password";  
-    //     }
-    // }
-    // catch (PDOException $e) {
-    //     echo "Database error: " . $e->getMessage();
-    // }
-        //Правильный подход к обраобтке запросов через ПДО
-    try {
-        $sql = "INSERT INTO `users` (id, email, pass) VALUES (?, ?, ?)";
-        // определяем prepared statement
-        $stmt = $conn->prepare($sql);
-        // привязываем параметры к значениям
-        $rowsNumber = $stmt->execute(array(NULL, $_POST["email"], $_POST["password"]));
-        // если добавлена как минимум одна строка
-        if($rowsNumber > 0 ){
-            echo "Пользователь успешно зарегистрирован: email=" . $_POST["email"] ."  password= " . $_POST["password"];  
-        }
-    }
+    ';} else {
+            try {
+            $sql = "INSERT INTO `users` (id, email, pass) VALUES (?, ?, ?)";
+            // определяем prepared statement
+            $stmt = $conn->prepare($sql);
+            // привязываем параметры к значениям
+            $rowsNumber = $stmt->execute(array(NULL, $_POST["email"], $_POST["password"]));
+            // если добавлена как минимум одна строка
+            if($rowsNumber > 0 ){
+                echo "Пользователь успешно зарегистрирован: email=" . $_POST["email"] ."  password= " . $_POST["password"];  
+            }
+         }
+    
     catch (PDOException $e) {
         echo "Database error: " . $e->getMessage();
     }
