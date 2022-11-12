@@ -6,7 +6,8 @@
 			<p>Пароль <br/>
 			<input   type="password" name="password" id="password"
 			         required pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,}"
-					 min="3" max="50"></p>
+					 min="3" max="50"
+					 placeholder="Цифры, буквы и символы"></p>
 			<input type="submit" id="button" value="Войти">
 	</form>
 		<br/>
