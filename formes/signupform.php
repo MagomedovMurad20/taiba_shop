@@ -1,6 +1,7 @@
 
 <?php
 
+
 if ($_POST['email']=='' || $_POST['password']=='')  require_once('./includes/signupform.php');
 
 

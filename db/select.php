@@ -7,7 +7,7 @@ $query_result=$conn->query($querycheck);
 
 if ($query_result !== FALSE)
 {
-//echo "table exist";
+echo "table exist";
 } else
 {
     $conn->query('CREATE TABLE users (
