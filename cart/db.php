@@ -10,7 +10,7 @@ if ($query_result !== FALSE)
 echo "table exist";
 } else
 {
-     $createTableProducts = $conn->query('CREATE TABLE products ( 
+     $createTableProducts = $conn->query('CREATE TABLE IF NOT EXISTS products ( 
         id_product int(11) NOT NULL AUTO_INCREMENT, 
         names varchar(100) NOT NULL, 
         descriptions varchar(250) NOT NULL, 
