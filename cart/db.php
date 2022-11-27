@@ -1,24 +1,15 @@
 <?php
 
-include_once('../db/dbconnect.php');
+$host         = "localhost";
+$user          = "root";
+$pass          = "root";
+$db_name     = "taiba";
+$connection = mysqli_connect($host, $user, $pass, $db_name);
 
-$querycheck='SELECT * from `products`';
-$query_result=$conn->query($querycheck);
+if (mysqli_connect_errno()) {
+    die("Data Base connection failed: " . mysqli_connect_error() . " (" . mysqli_connect_errno() . ")");
+} else {
+    # echo "Connection = success!\n" . mysqli_get_host_info($connection) . "<br />";
+}
 
-if ($query_result !== FALSE)
-{
-echo "table exist";
-} else
-{
-     $createTableProducts = $conn->query('CREATE TABLE IF NOT EXISTS products ( 
-        id_product int(11) NOT NULL AUTO_INCREMENT, 
-        names varchar(100) NOT NULL, 
-        descriptions varchar(250) NOT NULL, 
-        price int (11) NOT NULL, 
-        PRIMARY KEY (id_product)
-      )');};
-
-
-
-
-  
+mysqli_query($connection, "SET NAMES utf8");
