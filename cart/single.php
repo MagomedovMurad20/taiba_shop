@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
 
 <body>
 
-    <a href="index.php">Главная</a>
+    <a href="catalog.php">В каталог</a>
 
     <h1>
         <?php echo $current_product['name'] ?>
