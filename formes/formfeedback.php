@@ -11,7 +11,7 @@ else {
     $message = $_POST['message'];
     echo $name;
     echo "<br>";
-    echo $email;
+    echo $number;
     echo $message;
     mail($to, $name, $number, $message);
 }
