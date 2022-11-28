@@ -31,8 +31,10 @@
           <a href="#">По популярности</a>
         </div>
       </div>
-      <li><a href="korzina.php" <?php if ($page == 'korzina')
-                                  echo 'class="current"' ?>>Корзина</a></li>
+      <li><a href="catalog.php" <?php if ($page == 'catalog')
+                                  echo 'class="current"' ?>>Каталог</a></li>
+      <li><a href="admin.php" <?php if ($page == 'admin')
+                                echo 'class="current"' ?>>Админ</a></li>
     </ul>
   </nav>
 </header>
