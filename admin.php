@@ -7,16 +7,21 @@ if ($_POST['email'] == '' || $_POST['password'] == '') {
     echo '<h3>Загрузка товара</h3>
             <form method="post">
                 <p>Название <br />
-                    <input type="text" name="title" min="3"  autofocus required placeholder="Название товара" />
+                    <input type="text" name="title" min="3"  autofocus required pattern="[a-z]{4,8}"
+                    placeholder="Название товара" />
                 </p>
                 <p>Описание <br />
-                    <input type="text" name="description" min="50" max="50" autofocus required placeholder="Описание товара" />
+                    <input type="text" name="description"
+                     min="50" max="500" autofocus required
+                     pattern="[a-z]{4,8}"
+                     placeholder="Описание товара" />
                 </p>
                 <p>Цена <br />
-                    <input type="price" name="price" id="price" min="5" max="100" placeholder="3500" required/> руб.
+                    <input type="number" name="price" id="price"   pattern="[0-9]+(\\.[0-9][0-9]?)?" min="5" max="100" placeholder="3500" required/> руб.
                 </p>
                 <p>Фото <br />
-                    <input type="file" name="img" id="img" required />
+                    <input type="file" name="img" id="img"
+                    accept=".jpg, .jpeg, .png" required />
                 </p>
                 <input type="submit" value="Загрузить товар">
             </form>';
