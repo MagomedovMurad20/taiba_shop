@@ -5,19 +5,19 @@ require_once("./includes/header.php"); ?>
 <?php
 if ($_POST['email'] == '' || $_POST['password'] == '') {
     echo '<h3>Загрузка товара</h3>
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <p>Название <br />
-                    <input type="text" name="title" min="3"  autofocus required pattern="[a-z]{4,8}"
+                    <input type="text" name="title" min="3"  autofocus required"
                     placeholder="Название товара" />
                 </p>
                 <p>Описание <br />
                     <input type="text" name="description"
                      min="50" max="500" autofocus required
-                     pattern="[a-z]{4,8}"
                      placeholder="Описание товара" />
                 </p>
                 <p>Цена <br />
-                    <input type="number" name="price" id="price"   pattern="[0-9]+(\\.[0-9][0-9]?)?" min="5" max="100" placeholder="3500" required/> руб.
+                    <input type="number" name="price" id="price" 
+                     required/> руб.
                 </p>
                 <p>Фото <br />
                     <input type="file" name="img" id="img"
@@ -31,6 +31,10 @@ try {
     require_once './db/dbconnect.php';
 
     $sql = "INSERT INTO `products` (title, description, price, img) VALUES (?, ?, ?, ?)";
+
+    if (is_uploaded_file($_FILES['img']['tmp_name'])) {
+        $img = file_get_contents($_FILES['img']['tmp_name']);
+    }
     // определяем prepared statement
     $stmt = $conn->prepare($sql);
     // привязываем параметры к значениям
@@ -38,8 +42,9 @@ try {
         $_POST["title"],
         $_POST["description"],
         $_POST["price"],
-        $_POST["img"]
+        $img
     ));
+
 
     // если добавлена как минимум одна строка
     if ($rowsNumber > 0) {

@@ -8,7 +8,7 @@ if (isset($_SESSION['cart_list'])) {
 require_once "db.php";
 
 
-$query = "SELECT * FROM `product`";
+$query = "SELECT * FROM `products`";
 $req = mysqli_query($connection, $query);
 $data_from_db = [];
 
@@ -38,19 +38,18 @@ while ($result = mysqli_fetch_assoc($req)) {
         <?php foreach ($data_from_db as $product_item) : ?>
 
             <div class="product_item">
+                <p>
+                    <?php
+                    echo '<img  width=265px height=350px src="data:image/jpeg;base64,' . base64_encode($product_item['img']) . '" />';
+                    ?>
+
+                </p>
                 <h2>
-                    <?php echo $product_item['name'] ?>
+                    <?php echo $product_item['title'] ?>
                 </h2>
 
                 <p>
-                    <?php echo $product_item['desc'] ?>
-                </p>
-                <p>
-                    <?php
-                    echo '<img  width=265px src="data:image/jpeg;base64,' . base64_encode($product_item['img']) . '" />';
-                    ?>
-
-
+                    <?php echo $product_item['description'] ?>
                 </p>
 
                 <p><strong>
