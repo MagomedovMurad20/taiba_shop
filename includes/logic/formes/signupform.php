@@ -1,15 +1,17 @@
 <?php
 
-if ($_POST['email'] == '' || $_POST['password'] == '') {
-    require_once './includes/signupform.php';
-}
+require_once './includes/html/formes/signupform.php';
+//require_once '../../../db/dbconnect.php';
+require_once './db/dbconnect.php';
+
+
 
 try {
-    require_once './db/dbconnect.php';
 
     $sql = "INSERT INTO `users` (email, pass) VALUES (?, ?)";
     // определяем prepared statement
     $stmt = $conn->prepare($sql);
+    var_dump($stmt);
     // привязываем параметры к значениям
     $rowsNumber = $stmt->execute(array($_POST["email"], $_POST["password"]));
 

@@ -1,6 +1,6 @@
 
     <?php
-        $page = 'signup';
-        require_once('includes/header.php');
-        require_once('formes/loginform.php');
+    $page = 'signup';
+    require_once('includes/html/header.php');
+    require_once('includes/logic/formes/loginform.php');
     ?>

@@ -1,6 +1,6 @@
 <?php
 $page = 'admin';
-require_once("./includes/header.php"); ?>
+require_once("./includes/html/header.php"); ?>
 
 <?php
 if ($_POST['email'] == '' || $_POST['password'] == '') {
@@ -30,6 +30,7 @@ if ($_POST['email'] == '' || $_POST['password'] == '') {
 try {
     require_once './db/dbconnect.php';
 
+
     $sql = "INSERT INTO `products` (title, description, price, img) VALUES (?, ?, ?, ?)";
 
     if (is_uploaded_file($_FILES['img']['tmp_name'])) {
@@ -57,4 +58,21 @@ try {
 } catch (PDOException $e) {
     echo "Database error: " . $e->getMessage();
 }
+
+
+// $querycheck = 'SELECT * from `products`';
+// $query_result = $conn->query($querycheck);
+
+// if ($query_result !== FALSE) {
+//     echo "table exist";
+// } else {
+//     $conn->query('CREATE TABLE products (
+//         id int(11) AUTO_INCREMENT,
+//         title varchar(50) NOT NULL,
+//         description varchar(300) NOT NULL,
+//         price varchar(10) NOT NULL,
+//         img longblob NOT NULL,
+//         PRIMARY KEY(id)
+//     )');
+// }
 ?>
