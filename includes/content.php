@@ -1,110 +1,94 @@
-<div class="container content ">
-    <div class="product-item">
-        <img src="media/k1.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/k2.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
+<?php
+require_once("./cart/catalog.php")
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+
+<body>
+
+    <div id="center">
+
+        <?php foreach ($data_from_db as $product_item) : ?>
+
+            <div class="product_item">
+                <p>
+                    <?php
+                    echo '<img  width=265px height=350px src="data:image/jpeg;base64,' . base64_encode($product_item['img']) . '" />';
+                    ?>
+                </p>
+                <h2>
+                    <?php echo $product_item['title'] ?>
+                </h2>
+
+                <p>
+                    <?php echo $product_item['description'] ?>
+                </p>
+
+
+                <p><strong>
+                        <?php echo $product_item['price'] ?> rur
+                    </strong></p>
+
+                <a href="cart/single.php?id=<?php echo $product_item['id'] ?>">
+                    Подробнее
+                </a>
+
+                <a href="cart/cart.php?product_id=<?php echo $product_item['id'] ?>">
+                    В корзину
+                </a>
+            </div>
+
+        <?php endforeach; ?>
+
     </div>
 
-    <div class="product-item">
-        <img src="media/k3.jpg">
-        <div class="product-list">
-            <h3>Зеленый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/p1.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/p2.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/1.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/2.jpg">
-        <div class="product-list">
-            <h3>Черный костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
+</body>
+<style>
+    body {
+        font-family: Tahoma, serif;
+    }
 
-    <div class="product-item">
-        <img src="media/3.jpg">
-        <div class="product-list">
-            <h3>Зеленый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="" class="button">В корзину</a>
-        </div>
-    </div>
+    h1 {
+        text-align: center;
+    }
 
-    <div class="product-item">
-        <img src="media/4.jpg">
-        <div class="product-list">
-            <h3>Серый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="/catalog?in-cart-product-id=<?= $item["id"] ?>">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/5.jpg">
-        <div class="product-list">
-            <h3>Серый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="/catalog?in-cart-product-id=<?= $item["id"] ?>">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/6.jpg">
-        <div class="product-list">
-            <h3>Серый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="/catalog?in-cart-product-id=<?= $item["id"] ?>">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/7.jpg">
-        <div class="product-list">
-            <h3>Серый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="/catalog?in-cart-product-id=<?= $item["id"] ?>">В корзину</a>
-            class="button">В корзину</a>
-        </div>
-    </div>
-    <div class="product-item">
-        <img src="media/8.jpg">
-        <div class="product-list">
-            <h3>Серый костюм(трикотаж)</h3>
-            <span class="price">₽ 1999</span>
-            <a href="/catalog?in-cart-product-id=<?= $item["id"] ?>">В корзину</a>
-        </div>
-    </div>
-</div>
+    #center {
+        width: 900px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .product_item {
+        width: 260px;
+        height: fit-content;
+        float: left;
+        background: #424242;
+        color: #fff;
+        margin: 10px 10px 10px 10px;
+        padding: 10px;
+
+    }
+
+    .product_item a {
+        display: block;
+        color: #424242;
+        text-decoration: none;
+        text-align: center;
+        border: 1px solid #fff;
+        padding: 10px 0;
+        margin: 0 0 10px 0;
+        background: #fff;
+    }
+
+    .product_item a:hover {
+        background: transparent;
+        color: #fff;
+    }
+</style>
+
+</html>
