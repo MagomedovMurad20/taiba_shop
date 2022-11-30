@@ -1,7 +1,7 @@
 <?php
 require_once("./includes/logic/cart/catalog.php");
 
-$query = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%'";
+$query = "SELECT * FROM `products` WHERE `title` LIKE '%трикота%'";
 
 $req = mysqli_query($connection, $query);
 $data_from_db = [];

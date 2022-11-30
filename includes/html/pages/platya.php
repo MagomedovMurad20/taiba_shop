@@ -1,5 +1,5 @@
 <?php
-require_once("./includes/logic/cart/catalog.php")
+require_once("./includes/logic/pages/platya.php");
 ?>
 
 <div id="center">
