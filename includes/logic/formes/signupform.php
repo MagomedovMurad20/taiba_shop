@@ -11,7 +11,6 @@ try {
     $sql = "INSERT INTO `users` (email, pass) VALUES (?, ?)";
     // определяем prepared statement
     $stmt = $conn->prepare($sql);
-    var_dump($stmt);
     // привязываем параметры к значениям
     $rowsNumber = $stmt->execute(array($_POST["email"], $_POST["password"]));
 
