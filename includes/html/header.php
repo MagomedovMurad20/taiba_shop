@@ -24,12 +24,15 @@
       <li><a href="login.php" <?php if ($page == 'signup')
                                 echo 'class="current"' ?>>Войти</a></li>
       <div class="dropdown">
-        <button class="dropbtn">Сортировать</button>
-        <div class="dropdown-content">
-          <a href="#">По убыванию цены</a>
-          <a href="#">По возрастанию цены</a>
-          <a href="#">По популярности</a>
-        </div>
+        <form action="">
+          <button class="dropbtn">Сортировать</button>
+          <div class="dropdown-content">
+
+            <a href="#">По убыванию цены</a>
+            <a href="#">По возрастанию цены</a>
+            <a href="#">По популярности</a>
+          </div>
+        </form>
       </div>
     </ul>
   </nav>

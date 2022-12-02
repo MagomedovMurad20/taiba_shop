@@ -8,7 +8,7 @@ try {
     require_once './db/dbconnect.php';
 
 
-    $sql = "INSERT INTO `products` (title, description, price, img) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO `products` (title, description, price, img, category_id) VALUES (?, ?, ?, ?, ?)";
 
     if (is_uploaded_file($_FILES['img']['tmp_name'])) {
         $img = file_get_contents($_FILES['img']['tmp_name']);
@@ -20,7 +20,8 @@ try {
         $_POST["title"],
         $_POST["description"],
         $_POST["price"],
-        $img
+        $img,
+        $_POST['category_id']
     ));
 
 
@@ -36,18 +37,22 @@ try {
     echo "Database error: " . $e->getMessage();
 }
 
+
+
+//todo закрывать соединение скл
+
 // $querycheck = 'SELECT * from `products`';
 // $query_result = $conn->query($querycheck);
 
 // if ($query_result !== FALSE) {
-//     echo "table exist";
+// echo "table exist";
 // } else {
-//     $conn->query('CREATE TABLE products (
-//         id int(11) AUTO_INCREMENT,
-//         title varchar(50) NOT NULL,
-//         description varchar(300) NOT NULL,
-//         price varchar(10) NOT NULL,
-//         img longblob NOT NULL,
-//         PRIMARY KEY(id)
-//     )');
+// $conn->query('CREATE TABLE products (
+// id int(11) AUTO_INCREMENT,
+// title varchar(50) NOT NULL,
+// description varchar(300) NOT NULL,
+// price varchar(10) NOT NULL,
+// img longblob NOT NULL,
+// PRIMARY KEY(id)
+// )');
 // }
