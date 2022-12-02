@@ -2,7 +2,7 @@
 require_once("./includes/logic/cart/db.php");
 
 
-
+$sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%'";
 $select = $_POST['select'];
 switch ($select) {
     case "a_z":
