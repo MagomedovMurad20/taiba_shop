@@ -2,14 +2,21 @@
 require_once("./includes/logic/cart/db.php");
 
 
-$sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%'";
+$sql = "SELECT * FROM `products` WHERE `category_id` LIKE '2'";
 $select = $_POST['select'];
 switch ($select) {
     case "a_z":
-        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%'";
+        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%' ORDER BY `title` ";
         break;
     case "z_a":
-        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%плать%'";
+        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%' ORDER BY `title` DESC";
+        break;
+    case "priceMax":
+        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%' ORDER BY `price`";
+        break;
+
+    case "priceMin":
+        $sql = "SELECT * FROM `products` WHERE `title` LIKE '%куртк%' ORDER BY `price` DESC ";
         break;
 }
 $req = mysqli_query($connection, $sql);
@@ -24,8 +31,8 @@ while ($result = mysqli_fetch_assoc($req)) {
 
 <form action="" method="post">
     <select name='select'>
-        <option value='a_z' selected>куртки</option>
-        <option value='z_a'>платья</option>
+        <option value='a_z' selected>А-Б</option>
+        <option value='z_a'>Б-А</option>
         <option value='priceMax'>по цене (дороже)</option>
         <option value='priceMin'>по цене (дешевле)</option>
     </select>

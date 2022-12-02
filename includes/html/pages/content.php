@@ -7,11 +7,11 @@ require_once("./includes/logic/cart/catalog.php")
     <?php foreach ($data_from_db as $product_item) : ?>
 
         <div class="product_item">
-            <p>
-                <?php
-                echo '<img  width=265px height=350px src="data:image/jpeg;base64,' . base64_encode($product_item['img']) . '" />';
-                ?>
-            </p>
+
+            <?php
+            echo '<img  width=265px height=345px src="data:image/jpeg;base64,' . base64_encode($product_item['img']) . '" />';
+            ?>
+
             <h2>
                 <?php echo $product_item['title'] ?>
             </h2>
