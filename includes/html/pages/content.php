@@ -1,5 +1,6 @@
 <?php
-require_once("./includes/logic/cart/catalog.php")
+require_once("./includes/logic/cart/catalog.php");
+require_once("./includes/logic/pages/content.php")
 ?>
 
 <div id="center">

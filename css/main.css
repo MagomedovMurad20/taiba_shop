@@ -149,6 +149,14 @@
   padding: 16px;
 }
 
+.form_select_category {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 5em;
+}
+
+
 
 /* item */
 
