@@ -1,4 +1,4 @@
-<form action="" method="post" class="form_select_category">
+<form action="" method="post">
     <select name='select' class="select_category">
         <option value='a_z'>по алфавиту</option>
         <!-- <option value='z_a'>Б-А</option> -->

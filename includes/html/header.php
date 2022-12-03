@@ -23,6 +23,14 @@
                                     echo 'class="current"' ?>>Трикотаж</a></li>
       <li><a href="login.php" <?php if ($page == 'signup')
                                 echo 'class="current"' ?>>Войти</a></li>
+      <li>
+        <?php
+        require_once("./includes/html/formes/select_product.php");
+        ?>
+      </li>
+
+
+
       <!-- <div class="dropdown">
         <form action="">
           <button class="dropbtn">Сортировать</button>

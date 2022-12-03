@@ -1,6 +1,5 @@
 <?php
 require_once("./includes/logic/cart/db.php");
-include_once("./includes/html/formes/select_product.php");
 
 
 $sql = "SELECT * FROM `products` WHERE `category_id` LIKE '1'";
