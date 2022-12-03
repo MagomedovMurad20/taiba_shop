@@ -23,7 +23,7 @@
                                     echo 'class="current"' ?>>Трикотаж</a></li>
       <li><a href="login.php" <?php if ($page == 'signup')
                                 echo 'class="current"' ?>>Войти</a></li>
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <form action="">
           <button class="dropbtn">Сортировать</button>
           <div class="dropdown-content">
@@ -32,7 +32,7 @@
             <a href="#">По популярности</a>
           </div>
         </form>
-      </div>
+      </div> -->
     </ul>
   </nav>
 </header>
