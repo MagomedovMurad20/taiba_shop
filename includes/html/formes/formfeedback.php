@@ -1,14 +1,21 @@
 <?php
-include_once "./includes/logic/formes/formfeedback.php";
-$to = '@.com';
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+if ($_POST['email'] !== '' || $_POST['password'] !== '') {
+    $to = 'kurbtai@gmail.com';
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+}
+
+echo $to;
+echo "<br>";
 echo $name;
 echo "<br>";
 echo $phone;
 echo $message;
-mail($to, "$name . $phone . $message", "headera");
+$mail = mail($to, $name, $phone, $message);
+echo "<br>";
+
+var_dump($mail);
 
 ?>
 <div class="ufive-feedback">
