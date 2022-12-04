@@ -1,25 +1,28 @@
 <?php
-if ($_POST['email'] !== '' || $_POST['password'] !== '') {
+if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
     $to = 'kurbtai@gmail.com';
     $name = $_POST['name'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
+    // echo $to;
+    echo "<br>";
+    echo $name;
+    echo "<br>";
+    echo $phone;
+    echo $message;
+    $mail = mail($to, $name, $phone, $message);
+    // echo "<br>";
+
+    // var_dump($mail);
 }
 
-echo $to;
-echo "<br>";
-echo $name;
-echo "<br>";
-echo $phone;
-echo $message;
-$mail = mail($to, $name, $phone, $message);
-echo "<br>";
 
-var_dump($mail);
 
 ?>
-<div class="ufive-feedback">
+
+<div class="ufive-feedback" id="ufive-feedback">
     <section id="feedback">
+        <a href="#navbar" class="feedback-close">ЗАКРЫТЬ</a>
         <h1>Форма заказа</h1>
         <form method="POST">
 
@@ -43,3 +46,15 @@ var_dump($mail);
         </form>
     </section>
 </div>
+
+
+<script>
+    function myFunction() {
+        let popup = document.getElementById("ufive-feedback");
+        if (popup.classList.contains("ufive-feedback")) {
+            setTimeout(() => popup.classList.remove("ufive-feedback"))
+        }
+        setTimeout(() => popup.classList.add("ufive-feedback-show"), 10000) // If yes hide it after 10000 milliseconds
+
+    }
+</script>

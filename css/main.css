@@ -242,6 +242,46 @@ body {
   font-size: 62.5%;
   font-family: "Exo 2", sans-serif;
   font-weight: 600;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.ufive-feedback-show {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.feedback-close {
+  margin-left: 1050;
+  top: 10px;
+  font-size: larger;
+
+  text-decoration: none;
+  color: #313131;
+}
+
+.feedback-area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ufive-feedback:target {
+  opacity: 1;
+  visibility: visible;
 }
 
 .ufive-feedback section {

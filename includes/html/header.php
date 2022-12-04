@@ -28,10 +28,22 @@
         require_once("./includes/html/formes/select_product.php");
         ?>
       </li>
+      <li>
+        <a href="#ufive-feedback">Связаться с нами</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<body>
+  <?php
+  require_once("./includes/html/formes/formfeedback.php");
+
+  ?>
 
 
 
-      <!-- <div class="dropdown">
+  <!-- <div class="dropdown">
         <form action="">
           <button class="dropbtn">Сортировать</button>
           <div class="dropdown-content">
@@ -41,8 +53,3 @@
           </div>
         </form>
       </div> -->
-    </ul>
-  </nav>
-</header>
-
-<body>
