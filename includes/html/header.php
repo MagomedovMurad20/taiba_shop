@@ -29,7 +29,7 @@
         ?>
       </li>
       <li>
-        <a href="#ufive-feedback">Связаться с нами</a>
+        <a href="#ufive-feedback" onclick="feedBackOpen();">Связаться с нами</a>
       </li>
     </ul>
   </nav>

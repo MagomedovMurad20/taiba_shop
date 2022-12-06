@@ -13,18 +13,18 @@ if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
     $mail = mail($to, $name, $phone, $message);
     // echo "<br>";
 
-    // var_dump($mail);
+    // var_dump($mail); "$(this).toggleClass('newclass')"
 }
 
 
 
 ?>
 
-<div class="ufive-feedback" id="ufive-feedback">
+<div class="ufive-feedback-hide" id="ufive-feedback">
     <section id="feedback">
-        <a href="#navbar" class="feedback-close">ЗАКРЫТЬ</a>
+        <a href="#navbar" id="feedback-close" class="feedback-close" onclick="feedBackClose();">ЗАКРЫТЬ</a>
         <h1>Форма заказа</h1>
-        <form method="POST">
+        <form method=" POST">
 
             <div class="field name-box">
                 <input type="text" name="name" id="name" placeholder="Татьяна" maxlength="35" />
@@ -48,13 +48,13 @@ if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
 </div>
 
 
-<script>
+<!-- <script>
     function myFunction() {
         let popup = document.getElementById("ufive-feedback");
         if (popup.classList.contains("ufive-feedback")) {
-            setTimeout(() => popup.classList.remove("ufive-feedback"))
+            setTimeout(() => popup.classList.remove("ufive-feedback"), 1000)
         }
-        setTimeout(() => popup.classList.add("ufive-feedback-show"), 10000) // If yes hide it after 10000 milliseconds
+        setTimeout(() => popup.classList.add("ufive-feedback-show"), 1100) // If yes hide it after 10000 milliseconds
 
     }
-</script>
+</script> -->

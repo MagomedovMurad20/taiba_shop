@@ -238,19 +238,14 @@ body {
 
 @import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
 
-.ufive-feedback {
-  font-size: 62.5%;
-  font-family: "Exo 2", sans-serif;
-  font-weight: 600;
-  width: 100%;
-  height: 100%;
+.ufive-feedback-hide {
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
-  visibility: hidden;
 }
 
-.ufive-feedback-show {
+.ufive-feedback {
   font-size: 62.5%;
   font-family: "Exo 2", sans-serif;
   font-weight: 600;

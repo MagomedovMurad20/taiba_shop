@@ -1,3 +1,43 @@
+window.onload = function () { feedBack() };
+
+function feedBack() {
+  let popup = document.getElementById("ufive-feedback");
+  if (popup.classList.contains("ufive-feedback-hide")) {
+    setTimeout(() => popup.classList.add("ufive-feedback"), 50000)
+    //setTimeout(() => popup.classList.add("ufive-feedback-show"), 1000)
+    // setTimeout(() => document.getElementsByClassName('ufive-feedback').style = "visibility: visible;   opacity: 1", 1000);
+    setTimeout(() => console.log("aaaa!!!!!!!!!!"), 1000);
+  }
+};
+
+
+
+function feedBackClose() {
+  let popup = document.getElementById("ufive-feedback");
+  if (popup.classList.contains("ufive-feedback")) {
+    let NAME = document.getElementById("ufive-feedback")
+
+    NAME.className = "ufive-feedback-hide"
+    console.log("close");
+
+  }
+
+};
+
+
+
+function feedBackOpen() {
+  let popup = document.getElementById("ufive-feedback");
+  if (popup.classList.contains("ufive-feedback-hide")) {
+    let NAME = document.getElementById("ufive-feedback")
+
+    NAME.className = "ufive-feedback"
+    console.log("open");
+
+  }
+
+};
+
 window.onscroll = function () { myFunction() };
 
 // Get the navbar
