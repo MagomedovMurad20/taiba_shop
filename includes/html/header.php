@@ -11,6 +11,7 @@
 </head>
 
 <header>
+  <div id="top"></div>
   <nav class="top-menu" id="navbar">
     <ul class="menu-main">
       <li><a href="index.php" <?php if ($page == '/')
