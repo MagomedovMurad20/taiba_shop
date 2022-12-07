@@ -46,15 +46,3 @@ if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
         </form>
     </section>
 </div>
-
-
-<!-- <script>
-    function myFunction() {
-        let popup = document.getElementById("ufive-feedback");
-        if (popup.classList.contains("ufive-feedback")) {
-            setTimeout(() => popup.classList.remove("ufive-feedback"), 1000)
-        }
-        setTimeout(() => popup.classList.add("ufive-feedback-show"), 1100) // If yes hide it after 10000 milliseconds
-
-    }
-</script> -->

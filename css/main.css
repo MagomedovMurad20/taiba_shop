@@ -173,11 +173,7 @@ h1 {
   text-align: center;
 }
 
-#center {
-  width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-}
+
 
 .product_item {
   width: 260px;
@@ -195,8 +191,8 @@ h1 {
 }
 
 #center {
-  width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 1em;
   overflow: hidden;
 }
 
@@ -204,8 +200,8 @@ h1 {
   width: 16em;
   height: 38em;
   float: left;
-  background: #424242;
-  color: #fff;
+  background: #472f2f;
+  color: rgb(251, 243, 243);
   margin: 10px 10px 10px 10px;
   padding: 10px;
 
@@ -213,13 +209,13 @@ h1 {
 
 .product_item a {
   display: block;
-  color: #424242;
+  color: #0f0202;
   text-decoration: none;
   text-align: center;
-  border: 1px solid #fff;
+  border: 1px solid rgb(243, 238, 238);
   padding: 10px 0;
   margin: 0 0 10px 0;
-  background: #fff;
+  background: rgb(243, 238, 238);
 }
 
 .product_item a:hover {
