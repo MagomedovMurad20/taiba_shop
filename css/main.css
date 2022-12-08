@@ -1023,7 +1023,19 @@ form .field textarea.focused+label {
   align-items: center;
 }
 
-.cart a {
+.cart,
+.single a {
   text-decoration: none;
   color: black;
+}
+
+/* single */
+
+.single {
+  display: flex;
+  flex-direction: row;
+}
+
+.textsingle {
+  margin-left: 2em;
 }

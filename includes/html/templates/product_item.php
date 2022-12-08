@@ -21,7 +21,7 @@
                     <?php echo $product_item['price'] ?> rur
                 </strong></p>
 
-            <a href="./includes/logic/cart/single.php?id=<?php echo $product_item['id'] ?>">
+            <a href="/single.php?id=<?php echo $product_item['id'] ?>">
                 Подробнее
             </a>
 
