@@ -29,7 +29,7 @@ require_once("./includes/logic/formes/form_select_product.php");
                 Подробнее
             </a>
 
-            <a href="./includes/logic/cart/cart.php?product_id=<?php echo $product_item['id'] ?>">
+            <a href="/cart.php?product_id=<?php echo $product_item['id'] ?>">
                 В корзину
             </a>
         </div>
