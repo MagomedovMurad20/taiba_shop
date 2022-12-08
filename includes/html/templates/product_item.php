@@ -1,7 +1,3 @@
-<?php
-require_once("./includes/logic/cart/catalog.php");
-?>
-
 <div id="center">
 
     <?php foreach ($data_from_db as $product_item) : ?>
