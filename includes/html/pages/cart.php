@@ -1,8 +1,19 @@
+<?php
+$path = $_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/cart.php";
+$absolutePath = str_replace('\\', '/', $path);
+require_once($absolutePath);
+
+?>
+
 <a href="../../../index.php">На главную</a>
+
 
 <h1>Корзина</h1>
 
-<?php if (isset($_SESSION['cart_list']) && count($_SESSION['cart_list']) != 0) : ?>
+<?php
+
+if (isset($_SESSION['cart_list']) && count($_SESSION['cart_list']) != 0) : ?>
+
 
     <ul>
         <?php foreach ($_SESSION['cart_list'] as $product) : ?>
