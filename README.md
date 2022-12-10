@@ -1,3 +1,6 @@
+Этот проект написан на PHP.
+Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10,
+
 ## Running the project with Docker Compose
 
 ### After cloning the repository from gitHub:
