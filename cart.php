@@ -1,2 +1,2 @@
 <?php
-require_once("./includes/html/pages/cart.php");
+require_once("./includes/html/cart/cart.php");
