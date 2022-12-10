@@ -1,4 +1,4 @@
-### Этот проект написан на PHP. 
+### Этот проект написан на чистом PHP без использования фреймворков и библиотек. 
 
 ### Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10, Appache-2.4 or NGINX. Используйте Docker или OpenServer/mamp/wamp/xamp;
 
