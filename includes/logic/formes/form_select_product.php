@@ -1,5 +1,6 @@
 <?php
 require_once("./includes/logic/cart/db.php");
+session_start();
 $category_id;
 
 switch ($page) {

@@ -1020,6 +1020,7 @@ form .field textarea.focused+label {
   margin-left: auto;
   margin-right: auto;
   width: 20em;
+  height: auto;
   align-items: center;
 }
 

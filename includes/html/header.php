@@ -34,14 +34,12 @@
         <a href="#ufive-feedback" onclick="feedBackOpen();">Связаться с нами</a>
       </li>
     </ul>
+
   </nav>
+
 </header>
 
 <body>
-  <?php
-  require_once("./includes/html/formes/formfeedback.php");
-
-  ?>
 
 
 

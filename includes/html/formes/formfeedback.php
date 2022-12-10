@@ -1,5 +1,5 @@
 <?php
-if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
+if ($_POST['name'] !== '' && $_POST['phone'] && $_POST['message']) {
     $to = 'kurbtai@gmail.com';
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -11,11 +11,10 @@ if ($_POST['name'] !== '' || $_POST['phone'] !== '') {
     echo $phone;
     echo $message;
     $mail = mail($to, $name, $phone, $message);
-    // echo "<br>";
+    echo "$to";
 
-    // var_dump($mail); "$(this).toggleClass('newclass')"
+    var_dump($mail);
 }
-
 
 
 ?>

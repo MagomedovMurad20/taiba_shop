@@ -36,5 +36,5 @@
 
     <a href="../../../index.php">Продолжить покупки</a>
     <br>
-    <a href=".includes/logic/cart/order.php">Оформить заказ</a>
+    <a href="/includes/logic/cart/order.php">Оформить заказ</a>
 </div>
