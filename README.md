@@ -1,4 +1,5 @@
 Этот проект написан на PHP. 
+
 Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10, Appache-2.4 or NGINX, .
 
 Код отвечающий за autoloader находится в /core/autoloader;
@@ -13,9 +14,13 @@
 table products created";
 
 Код отвечающий за docker находится в /docker/app.dockerfile.php;
+
 Код отвечающий за nginx для docker находится в /docker/nginx;
+
 Код отвечающий за js для docker находится в /js;
+
 Код отвечающий за css для docker находится в /css;
+
 Если вам понадобятся фото они находится в /media;
 
 Код отвечающий за логику находится в includes/logic:
@@ -30,6 +35,7 @@ table products created";
 - код отвечающий за шаблоны находится в includes/html/templates/;
 
 Файлы отвечающие за сбор кодов для вывода страниц находятся в корне проекта и называются соответственно страницам.
+
 Дамп базы данных отправлю в доп файле.
 
 
