@@ -27,7 +27,7 @@ switch ($select) {
 
 
 
-if ($category_id == 123) {
+if (!$category_id) {
     switch ($select) {
 
         case "":

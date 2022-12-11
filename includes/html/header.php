@@ -14,8 +14,8 @@
   <div id="top"></div>
   <nav class="top-menu" id="navbar">
     <ul class="menu-main">
-      <li><a href="index.php?category_id=123" <?php if ($page == '/')
-                                                echo 'class="current"' ?>>Главная</a></li>
+      <li><a href="index.php?" <?php if ($page == '/')
+                                  echo 'class="current"' ?>>Главная</a></li>
       <li><a href="kurtki.php?category_id=2" <?php if ($page == 'kurtki')
                                                 echo 'class="current"' ?>>Куртки</a></li>
       <li><a href="platya.php?category_id=1" <?php if ($page == 'platya')
