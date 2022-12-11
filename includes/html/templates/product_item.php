@@ -1,6 +1,8 @@
 <div id="center">
 
-    <?php foreach ($data_from_db as $product_item) : ?>
+    <?php
+
+    foreach ($data_from_db as $product_item) : ?>
 
         <div class="product_item">
 
