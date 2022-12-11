@@ -14,14 +14,14 @@
   <div id="top"></div>
   <nav class="top-menu" id="navbar">
     <ul class="menu-main">
-      <li><a href="index.php" <?php if ($page == '/')
-                                echo 'class="current"' ?>>Главная</a></li>
-      <li><a href="kurtki.php" <?php if ($page == 'kurtki')
-                                  echo 'class="current"' ?>>Куртки</a></li>
-      <li><a href="platya.php" <?php if ($page == 'platya')
-                                  echo 'class="current"' ?>>Платья</a></li>
-      <li><a href="trikotaj.php" <?php if ($page == 'trikotaj')
-                                    echo 'class="current"' ?>>Трикотаж</a></li>
+      <li><a href="index.php?category_id" <?php if ($page == '/')
+                                            echo 'class="current"' ?>>Главная</a></li>
+      <li><a href="kurtki.php?category_id=2" <?php if ($page == 'kurtki')
+                                                echo 'class="current"' ?>>Куртки</a></li>
+      <li><a href="platya.php?category_id=1" <?php if ($page == 'platya')
+                                                echo 'class="current"' ?>>Платья</a></li>
+      <li><a href="trikotaj.php?category_id=3" <?php if ($page == 'trikotaj')
+                                                  echo 'class="current"' ?>>Трикотаж</a></li>
       <li><a href="login.php" <?php if ($page == 'signup')
                                 echo 'class="current"' ?>>Войти</a></li>
       <li>
