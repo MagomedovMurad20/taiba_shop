@@ -1,5 +1,5 @@
 <?php
-include_once('dbconnect.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 $querycheck = 'SELECT * from `users`';
 $query_result = $conn->query($querycheck);

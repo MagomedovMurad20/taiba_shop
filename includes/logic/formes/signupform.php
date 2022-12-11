@@ -4,9 +4,9 @@
 
 
 if ($_POST['email'] == '' || $_POST['password'] == '') {
-    require_once './includes/html/formes/signupform.php';
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/signupform.php");
 } else {
-    require_once './db/dbconnect.php';
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 
     try {

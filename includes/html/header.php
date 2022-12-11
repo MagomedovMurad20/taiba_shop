@@ -26,8 +26,8 @@
                                 echo 'class="current"' ?>>Войти</a></li>
       <li>
         <?php
-        require_once("./includes/logic/formes/form_select_product.php");
-        require_once("./includes/html/formes/select_product.php");
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/formes/form_select_product.php");
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/select_product.php");
         ?>
       </li>
       <li>

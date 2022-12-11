@@ -1,5 +1,5 @@
 <?php
-require_once("./includes/html/formes/adminform.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/adminform.php");
 
 
 if ($_POST['email'] !== '' || $_POST['password'] !== '') {

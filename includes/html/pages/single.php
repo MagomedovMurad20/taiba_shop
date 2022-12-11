@@ -1,9 +1,6 @@
 <?php
-require_once("./includes/html/header.php");
-
-$path = $_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/single.php";
-$absolutePath = str_replace('\\', '/', $path);
-require_once($absolutePath);
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/header.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/single.php");
 ?>
 <div class="single">
 
@@ -30,7 +27,7 @@ require_once($absolutePath);
 
         <a href="order.php?title=<?php echo $current_product['title'] ?>">Купить в 1 клик</a>
         <br>
-        <a href="cart.php?course_id=<?php echo $current_product['id'] ?>">Добавить в корзину</a>
+        <a href="cart.php?product_id=<?php echo $current_product['id'] ?>">Добавить в корзину</a>
 
 
     </div>

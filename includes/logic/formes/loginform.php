@@ -1,9 +1,9 @@
 <?php
 
 if ($_POST['email'] == '' || $_POST['password'] == '')
-	require_once('./includes/html/formes/loginform.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/loginform.php");
 else {
-	require_once('./db/dbconnect.php');
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 	$sql = "SELECT * FROM `users` WHERE email=:email AND pass=:pass"; //Формируем запрос без данных
 	$stmt = $conn->prepare($sql);
 	$rowsNumber = $stmt->execute(array(":email" => $_POST["email"], ":pass" => $_POST["password"]));

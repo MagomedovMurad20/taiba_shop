@@ -1,4 +1,4 @@
 <?php
 $page = 'admin';
-require_once("./includes/html/header.php");
-require_once("./includes/logic/formes/adminform.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/header.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/formes/adminform.php");

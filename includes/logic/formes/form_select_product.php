@@ -1,5 +1,7 @@
-<?php
-require_once("./includes/logic/cart/db.php");
+<?
+// $DOCUMENT_ROOT = $_SERVER('DOCUMENT_ROOT');
+
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
 session_start();
 $category_id;
 
