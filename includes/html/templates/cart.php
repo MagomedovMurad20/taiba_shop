@@ -17,7 +17,7 @@
                     <?php
                     echo '<img  width=60px src="data:image/jpeg;base64,' . base64_encode($product['img']) . '" />';
                     ?>
-                    <?php echo $product['name']; ?> |
+                    <?php echo $product['title']; ?> |
                     <?php echo $product['price']; ?> руб. |
                     <a href="cart.php?delete_id=<?php echo $product['id']; ?>">удалить</a>
                 </li>
@@ -37,4 +37,26 @@
     <a href="../../../index.php">Продолжить покупки</a>
     <br>
     <a href="/includes/logic/cart/order.php">Оформить заказ</a>
+</div>
+<div class="recomend_in_cart">
+
+    <ul>
+        <?php foreach ($product_recomend_in_cart as $product) : ?>
+
+            <li>
+                <?php
+                echo '<img  width=60px src="data:image/jpeg;base64,' . base64_encode($product['img']) . '" />';
+                ?>
+                <?php echo $product['title']; ?> |
+                <?php echo $product['price']; ?> руб. |
+                <a href="/cart.php?product_id=<?php echo $product_item['id'] ?>">
+                    В корзину
+                </a>
+                <a href="/single.php?id=<?php echo $product_item['id'] ?>">
+                    Подробнее
+                </a>
+            </li>
+
+        <?php endforeach; ?>
+    </ul>
 </div>
