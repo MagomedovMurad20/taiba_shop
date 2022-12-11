@@ -1,7 +1,7 @@
 <div class="cart">
     <h1>Корзина</h1>
 
-    <a href="../../../index.php">На главную</a>
+    <a href="/index.php">На главную</a>
 
 
 
@@ -34,7 +34,7 @@
     <?php endif; ?>
 
 
-    <a href="../../../index.php">Продолжить покупки</a>
+    <a href="/index.php">Продолжить покупки</a>
     <br>
     <a href="/includes/logic/cart/order.php">Оформить заказ</a>
 </div>
