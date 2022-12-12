@@ -1,4 +1,4 @@
-## При клонировании данного репозитория запустите git bash в директории, куда хотите клонировать проект и введите команду  git clone https://github.com/MagomedovMurad20/taiba_shop.git .
+## При клонировании данного репозитория запустите git bash в директории, куда хотите клонировать проект и введите команду:  <p> git clone https://github.com/MagomedovMurad20/taiba_shop.git .</p>
 ### Этот проект написан на чистом PHP без использования фреймворков и библиотек. 
 
 ### Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10, Appache-2.4 or NGINX. Используйте Docker или OpenServer/mamp/wamp/xamp;
