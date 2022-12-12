@@ -12,13 +12,4 @@ try {
     die();
 }
 
-switch (true) {
-    case $conn === true:
-        //Для  Докера
-        $conn = new PDO('mysql:host=db;dbname=murad', 'murad', 'murad');
-        break;
-    default:
-        //     //Для Опенсервера
-        $conn = new PDO('mysql:host=localhost;dbname=taiba', 'root', 'root');
-        break;
-}
+$conn = new PDO('mysql:host=localhost;dbname=taiba', 'root', 'root');

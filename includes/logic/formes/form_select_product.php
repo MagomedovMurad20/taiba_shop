@@ -8,37 +8,34 @@ $select = $_POST['select'];
 switch ($select) {
 
     case "":
-        $sql;
-        break;
+
     case "a_z":
         $sql .= " ORDER BY `title` ";
         break;
     case "z_a":
-        $sql .= "ORDER BY `title` DESC";
+        $sql .= " ORDER BY `title` DESC";
         break;
     case "priceMax":
-        $sql .= "ORDER BY `price` DESC";
+        $sql .= " ORDER BY `price` DESC";
         break;
 
     case "priceMin":
-        $sql .= "ORDER BY `price`  ";
+        $sql .= " ORDER BY `price`  ";
         break;
 }
 
 
 
 if (!$category_id) {
-    $sql = "SELECT * FROM `products` ";
+    $sql = " SELECT * FROM `products` ";
     switch ($select) {
 
-        case "":
-            $sql;
-            break;
+
         case "a_z":
-            $sql .= "ORDER BY `title` ";
+            $sql .= " ORDER BY `title` ";
             break;
         case "z_a":
-            $sql .= "ORDER BY `title` DESC";
+            $sql .= " ORDER BY `title` DESC";
             break;
         case "priceMax":
             $sql .= " ORDER BY `price` DESC";
