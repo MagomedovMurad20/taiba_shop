@@ -15,7 +15,7 @@ if ($_POST['email'] == '' || $_POST['password'] == '') {
         // определяем prepared statement
         $stmt = $conn->prepare($sql);
         // привязываем параметры к значениям
-        $rowsNumber = $stmt->execute(array($_POST["email"], $_POST["password"]));
+        $rowsNumber = $stmt->execute(array($_POST["email"], md5($_POST["password"])));
 
         // если добавлена как минимум одна строка
         if ($rowsNumber > 0) {
