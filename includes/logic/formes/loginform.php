@@ -3,17 +3,31 @@
 if ($_POST['email'] == '' || $_POST['password'] == '')
 	require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/loginform.php");
 else {
-	require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
-	$sql = "SELECT * FROM `users` WHERE email=:email AND pass=:pass"; //Формируем запрос без данных
-	$stmt = $conn->prepare($sql);
-	$rowsNumber = $stmt->execute(array(":email" => $_POST["email"], ":pass" => $_POST["password"]));
-	$resultArray = $stmt->fetchAll();
-	$username = $_POST["email"];
-	if (count($resultArray) > 0) { //Если база вернула 1 значение, значит и логин и пароль совпали. отлично
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+
+
+	$password = $_POST["password"];
+	$email = $_POST["email"];
+	$sql = "SELECT * FROM `users` WHERE `email`= '$email' AND `pass`= '$password'";
+	var_dump($sql);
+	$result = $connection->query($sql);
+	$user = $result->fetch_assoc(); // Конвертируем в массив
+	if (count($user) > 0) {
 		$new_url = 'admin.php';
 		header('Location: ' . $new_url);
-		//$_SESSION['user'] = $result[0]; //сохраняем обьект пользователя в сессии
+		exit();
+	} else if (count($user) == 0) {
+		echo "Логин или праоль введены неверно";
+		exit();
+	}
 
-	} else
+	$mysql->close();
+
+
+	$req = mysqli_query($connection, $sql);
+	if ($req === TRUE) {
+	} else {
 		echo '<meta charset="UTF-8">Логин или пароль не верный или пользователь не существует';
+	}
+	$connection->close();
 }
