@@ -1,27 +1,9 @@
 <?php
 
-//Реализовать подключение к бд при Опенсервере и Докере
-
-
-
-
-switch (true) {
-    default:
-        //Для  Докера
-        $host = "db";
-        $user = "root";
-        $pass = "root";
-        $db_name = "taiba";
-        break;
-    case $conn !== true:
-        //Для Опенсервера
-        $host = "db";
-        $user = "root";
-        $pass = "root";
-        $db_name = "taiba";
-        break;
-}
-
+$host         = "localhost";
+$user          = "root";
+$pass          = "root";
+$db_name     = "taiba";
 $connection = mysqli_connect($host, $user, $pass, $db_name);
 
 if (mysqli_connect_errno()) {

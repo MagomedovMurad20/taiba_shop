@@ -1,6 +1,6 @@
 <?
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 $category_id = $_GET['category_id'];
 $sql = "SELECT * FROM `products` WHERE `category_id` = $category_id";

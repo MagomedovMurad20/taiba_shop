@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 session_start();
 

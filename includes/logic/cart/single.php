@@ -6,7 +6,7 @@ if (isset($_SESSION['cart_list'])) {
 }
 
 // require_once "db.php";
-require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 
 if (isset($_GET['id'])) {

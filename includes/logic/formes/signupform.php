@@ -17,7 +17,7 @@ if ($_POST['email'] == '' || $_POST['password'] == '') {
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/signupform.php");
 } else {
     // require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 
     $email = $_POST["email"];

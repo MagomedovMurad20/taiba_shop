@@ -1,6 +1,6 @@
 <?php
 // require_once "/includes/logic/cart/db.php";
-require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 function get_product_by_id($id)
 {
