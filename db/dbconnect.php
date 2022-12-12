@@ -12,4 +12,13 @@ try {
     die();
 }
 
-$conn = new PDO('mysql:host=localhost;dbname=taiba', 'root', 'root');
+switch (true) {
+    case $conn === true:
+        //Для  Докера
+        $conn = new PDO('mysql:host=db;dbname=taiba', 'root', 'root');
+        break;
+    default:
+        //     //Для Опенсервера
+        $conn = new PDO('mysql:host=localhost;dbname=taiba', 'root', 'root');
+        break;
+}
