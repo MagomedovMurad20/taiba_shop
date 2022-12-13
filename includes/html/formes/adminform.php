@@ -36,7 +36,7 @@
                        <label for="category_id">Категория</label>
                        <select name="category_id">
                            <?php
-                            require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/db.php");
+                            require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
                             require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/formes/adminformselect.php");
                             ?>
                        </select>

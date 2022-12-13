@@ -2,15 +2,16 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/adminform.php");
 
 
-if ($_POST['email'] !== '' || $_POST['password'] !== '') {
+if ($_POST['ttle'] !== '') {
     require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
-
-
-
-
-
-
-
+    $img = "netimg";
+    if (is_uploaded_file($_FILES['img']['tmp_name'])) {
+        $img = file_get_contents($_FILES['img']['tmp_name']);
+    }
+    $title = $_POST["title"];
+    $desc = $_POST["description"];
+    $price = $_POST["price"];
+    $category_id = $_POST['category_id'];
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -19,11 +20,6 @@ if ($_POST['email'] !== '' || $_POST['password'] !== '') {
 
 
 
-    $title = $_POST["title"];
-    $desc = $_POST["description"];
-    $price = $_POST["price"];
-    $img = file_get_contents($_FILES['img']['tmp_name']);
-    $category_id = $_POST['category_id'];
     $stmt->execute();
 
     printf("строк добавлено: %d.\n", $stmt->affected_rows);

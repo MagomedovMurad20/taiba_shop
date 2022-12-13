@@ -64,3 +64,4 @@ Then run:
 ```bash
 docker-compose up -d
 ```
+Проект открывайте по адресу http://localhost:58080/
