@@ -5,7 +5,7 @@ $user = "murad";
 $pass = "murad";
 $db_name = "murad";
 
-//for OpenServer
+// for OpenServer
 // $host = "localhost";
 // $user = "root";
 // $pass = "root";
