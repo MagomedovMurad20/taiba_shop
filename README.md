@@ -1,9 +1,45 @@
 ## При клонировании данного репозитория запустите git bash в директории, куда хотите клонировать проект и введите команду:  
-#### " git clone ссылканарепозиторий . "
+#### " git clone ссылканарепозиторий . " 
 ## Проект можно запустить в docker. Подробные инструкции в конце этого файла README.
 # Этот проект написан на чистом PHP без использования фреймворков и библиотек. 
 
 ### Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10, Appache-2.4 or NGINX. Используйте Docker или OpenServer/mamp/wamp/xamp;
+
+## Running the project with Docker Compose
+
+### After cloning the repository from gitHub:
+
+Copy .env.example (if `.env` file not exists):
+
+```bash
+cp .env.example .env
+```
+
+and set some parameters in `.env` file,
+for example, `FORWARD_DB_PORT`, `FORWARD_REDIS_PORT`, `DB_PASSWORD`, `DB_HOST` etc,
+if needed!
+
+Then run:
+
+```bash
+docker-compose up -d
+```
+Проект открывайте по адресу http://localhost:58080/
+
+После запуска обязательно загрузите дам базы данных /dumpsql/db.sql, чтобы сайт заработал корректно. 
+Это можно сделать, открыв базу, 
+например через приложение heidi.sql
+Далее «Создать»:
+имя хоста/IP: localhost
+пользователь: murad
+пароль: murad
+порт: 53306
+далее <<Открыть>>.
+После этого откройте в основном верхнем меню пункт «Файл».
+В этом пункте меню вам нужно отыскать подпункт «Загрузить SQL»
+Далее выбираете products.sql
+## Если у вас windows: запустите docker desktop, прежде чем следовать инструкциям
+
 
 ### Код отвечающий за подключение к базе данных находится в /db/dbconnect.php;
 
@@ -42,29 +78,3 @@ table products created";
 ### Если вам понадобятся фото они находится в /media;
 
 ### Код отвечающий за autoloader находится в /core/autoloader;
-
-### Дамп базы данных отправлю в доп файле;
-
-
-## Running the project with Docker Compose
-
-### After cloning the repository from gitHub:
-
-Copy .env.example (if `.env` file not exists):
-
-```bash
-cp .env.example .env
-```
-
-and set some parameters in `.env` file,
-for example, `FORWARD_DB_PORT`, `FORWARD_REDIS_PORT`, `DB_PASSWORD`, `DB_HOST` etc,
-if needed!
-
-Then run:
-
-```bash
-docker-compose up -d
-```
-Проект открывайте по адресу http://localhost:58080/
-
-## Если у вас windows: запустите docker desktop, прежде чем следовать инструкциям
