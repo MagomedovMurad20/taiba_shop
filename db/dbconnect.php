@@ -1,7 +1,6 @@
 <?php
-
-$host = "db";
 //for Docker
+$host = "db";
 $user = "murad";
 $pass = "murad";
 $db_name = "murad";
