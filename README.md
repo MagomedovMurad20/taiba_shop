@@ -1,5 +1,6 @@
 ## При клонировании данного репозитория запустите git bash в директории, куда хотите клонировать проект и введите команду:  
 #### " git clone https://github.com/MagomedovMurad20/taiba_shop.git . "
+## Проект можно запустить в docker. Подробные инструкции в конце этого файла README.
 # Этот проект написан на чистом PHP без использования фреймворков и библиотек. 
 
 ### Требования: PHP-7 и выше, MySQL or MariaDB-10.5-Win10, Appache-2.4 or NGINX. Используйте Docker или OpenServer/mamp/wamp/xamp;
@@ -65,3 +66,5 @@ Then run:
 docker-compose up -d
 ```
 Проект открывайте по адресу http://localhost:58080/
+
+## Если у вас windows: запустите docker desktop, прежде чем следовать инструкциям
