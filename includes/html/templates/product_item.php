@@ -27,7 +27,7 @@
                 Подробнее
             </a>
 
-            <a href="/cart.php?product_id=<?php echo $product_item['id'] ?>">
+            <a href="#index.php?product_id=<?php echo $product_item['id'] ?>" onclick="cartOpen();">
                 В корзину
             </a>
         </div>

@@ -33,9 +33,14 @@ function feedBackOpen() {
 
     NAME.className = "ufive-feedback"
     console.log("open");
-
   }
-
+};
+function cartOpen() {
+  let popup = document.getElementById("cart-popup");
+  if (popup.classList.contains("cart-popup-hide")) {
+    popup.className = "cart-popup"
+    console.log("open");
+  }
 };
 
 window.onscroll = function () { myFunction() };
