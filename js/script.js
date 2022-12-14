@@ -42,6 +42,14 @@ function cartOpen() {
     console.log("open");
   }
 };
+function cartClose() {
+  let popup = document.getElementById("cart-popup");
+  if (popup.classList.contains("cart-popup")) {
+    popup.className = "cart-popup-hide"
+    console.log("open");
+  }
+};
+
 
 window.onscroll = function () { myFunction() };
 

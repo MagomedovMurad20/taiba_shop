@@ -1,4 +1,5 @@
 <div class="cart-popup-hide" id="cart-popup">
+    <a href="#" onclick="cartClose();">Закрыть</a>
 
     <?php
 
