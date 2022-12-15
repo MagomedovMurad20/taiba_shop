@@ -1047,6 +1047,22 @@ form .field textarea.focused+label {
   font-weight: bolder;
 }
 
+.small-cart {
+  width: 10em;
+
+
+}
+
+.small-cart img {
+  width: 5em;
+  height: 2em;
+}
+
+.small-cart a {
+  text-decoration: none;
+  color: #0f0202;
+}
+
 .cart {
   margin-left: auto;
   margin-right: auto;

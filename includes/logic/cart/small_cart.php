@@ -3,11 +3,10 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 session_start();
 
-if (isset($_SESSION['cart_list'])) {
-	echo "Корзина: " . count($_SESSION['cart_list']) . " товара";
-	echo " ";
-} ?>
+if (isset($_SESSION['cart_list'])) { ?>
 
-<a href="#" onclick="cartOpen();">
-	В корзину
-</a>
+	<div class="small-cart">
+
+		Корзина: <?php echo count($_SESSION['cart_list']) ?> товара
+	</div>
+<?php } ?>
