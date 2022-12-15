@@ -41,11 +41,6 @@ if (isset($_GET['product_id']) && !empty($_GET['product_id'])) {
 		if (!$product_check) {
 			$_SESSION['cart_list'][] = $current_added_product;
 		}
-		ob_start();
-		$new_url = 'index.php';
-		header('Location: ' . $new_url);
-		ob_end_flush();
-		exit();
 	} else {
 		header("Location: 404.php");
 	}
