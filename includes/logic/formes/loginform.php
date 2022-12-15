@@ -13,8 +13,10 @@ else {
 	$result = $connection->query($sql);
 	$user = $result->fetch_assoc(); // Конвертируем в массив
 	if (count($user) > 0) {
+		ob_start();
 		$new_url = 'admin.php';
 		header('Location: ' . $new_url);
+		ob_end_flush();
 		exit();
 	} else if (count($user) == 0) {
 		echo "Логин или праоль введены неверно";
