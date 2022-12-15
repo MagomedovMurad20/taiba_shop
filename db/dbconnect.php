@@ -1,15 +1,15 @@
 <?php
 //for Docker
-// $host = "db";
-// $user = "murad";
-// $pass = "murad";
-// $db_name = "murad";
+$host = "db";
+$user = "murad";
+$pass = "murad";
+$db_name = "murad";
 
 //for OpenServer
-$host = "localhost";
-$user = "root";
-$pass = "root";
-$db_name = "taiba";
+// $host = "localhost";
+// $user = "root";
+// $pass = "root";
+// $db_name = "taiba";
 $connection = mysqli_connect($host, $user, $pass, $db_name);
 
 if (mysqli_connect_errno()) {
