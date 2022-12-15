@@ -34,5 +34,5 @@
     <br>
     <a href="/includes/logic/cart/order.php">Оформить заказ</a>
     <br>
-    <a href="/cart.php">В корзину</a>
+    <a href="/cart.php">Открыть корзину в новом окне</a>
 </div>
