@@ -32,6 +32,14 @@
       <li>
         <a href="#ufive-feedback" onclick="feedBackOpen();">Связаться с нами</a>
       </li>
+      <li>
+        <a href="#" onclick="cartOpen();">
+
+          <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/logic/cart/small_cart.php"); ?>
+        </a>
+      </li>
+      <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/cart/cart_popup.php"); ?>
+
     </ul>
 
   </nav>

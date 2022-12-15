@@ -1048,12 +1048,13 @@ form .field textarea.focused+label {
 }
 
 .small-cart {
-  margin-left: 80%;
+  width: 10em;
+
 
 }
 
 .small-cart img {
-  width: 2em;
+  width: 5em;
   height: 2em;
 }
 
