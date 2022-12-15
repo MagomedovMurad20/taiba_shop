@@ -1,5 +1,6 @@
 <?
 
+require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/select_product.php");
 require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
 
 $category_id = $_GET['category_id'];
