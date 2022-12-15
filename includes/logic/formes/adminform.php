@@ -1,8 +1,10 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/adminform.php");
 
 
-if ($_POST['ttle'] !== '') {
+if ($_POST['ttle'] == '') {
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/html/formes/adminform.php");
+    echo "cho";
+} else {
     require_once($_SERVER['DOCUMENT_ROOT'] . "/db/dbconnect.php");
     $img = "netimg";
     if (is_uploaded_file($_FILES['img']['tmp_name'])) {
@@ -23,6 +25,4 @@ if ($_POST['ttle'] !== '') {
     $stmt->execute();
 
     printf("строк добавлено: %d.\n", $stmt->affected_rows);
-} else {
-    echo "cho";
 }
