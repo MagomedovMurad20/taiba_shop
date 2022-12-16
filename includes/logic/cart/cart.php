@@ -41,20 +41,14 @@ if (isset($_GET['product_id']) && !empty($_GET['product_id'])) {
 		if (!$product_check) {
 			$_SESSION['cart_list'][] = $current_added_product;
 		}
+
+		ob_start();
+		$new_url = $_SERVER['HTTP_REFERER']; //_GET['page'];
+		header('Location: ' . $new_url);
+		ob_end_flush();
+		exit();
 	} else {
 		header("Location: 404.php");
 	}
 }
-$page =	$_GET['cart'];
-
-get_products_for_recomend($page);
-
-if (!empty($current_added_product)) {
-
-	if (!isset($_GET['cart'])) {
-		$product_recomend_in_cart[] = get_products_for_recomend($page);
-	}
-}
-//require_once "../../html/pages/cart.php";
-
-// var_dump($_SESSION);
+//todo сделать рекоменд товары

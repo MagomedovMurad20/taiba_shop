@@ -1027,13 +1027,12 @@ form .field textarea.focused+label {
 .cart-popup {
   align-items: space-between;
   background-color: #e2dfdb;
-  font-size: 62.5%;
+  font-size: 70%;
   font-family: "Exo 2", sans-serif;
-  font-weight: 600;
-  margin-left: 40%;
-  height: 10%;
-  width: fit-content;
-  height: fit-content;
+
+  margin-left: 40em;
+  width: 50em;
+  height: 50em;
   position: fixed;
   margin-bottom: 40px;
   visibility: visible;
@@ -1044,7 +1043,7 @@ form .field textarea.focused+label {
   color: rgb(210, 49, 49);
   border: #0f0202;
   border-radius: 3%;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .small-cart {

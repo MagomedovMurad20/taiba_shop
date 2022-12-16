@@ -38,6 +38,8 @@
     <br>
     <a href="/includes/logic/cart/order.php">Оформить заказ</a>
 </div>
+<?php //todo сделать рекоменд товары
+?>
 <div class="recomend_in_cart">
 
     <ul>
