@@ -51,16 +51,4 @@ if (isset($_GET['product_id']) && !empty($_GET['product_id'])) {
 		header("Location: 404.php");
 	}
 }
-$page =	$_GET['cart'];
-
-get_products_for_recomend($page);
-
-if (!empty($current_added_product)) {
-
-	if (!isset($_GET['cart'])) {
-		$product_recomend_in_cart[] = get_products_for_recomend($page);
-	}
-}
-//require_once "../../html/pages/cart.php";
-
-// var_dump($_SESSION);
+//todo сделать рекоменд товары

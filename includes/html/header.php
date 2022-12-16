@@ -14,8 +14,8 @@
   <div id="top"></div>
   <nav class="top-menu" id="navbar">
     <ul class="menu-main">
-      <li><a href="index.php?" <?php if (!$_GET['page'])
-                                  echo 'class="current"' ?>>Главная</a></li>
+      <li><a href="index.php?page=home" <?php if (!$_GET['page'])
+                                          echo 'class="current"' ?>>Главная</a></li>
       <li><a href="kurtki.php?category_id=2&page=kurtki" <?php if ($_GET['page'] == 'kurtki')
                                                             echo 'class="current"' ?>>Куртки</a></li>
       <li><a href="platya.php?category_id=1&page=platya" <?php if ($_GET['page'] == 'platya')
